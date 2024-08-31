@@ -7,9 +7,10 @@
  * See a full list of supported triggers at https://firebase.google.com/docs/functions
  */
 
-import {onRequest} from "firebase-functions/v2/https";
+import { onRequest } from "firebase-functions/v2/https";
 // import * as logger from "firebase-functions/logger";
-import {expressServer} from "./express-server";
+import { server as _helloWorld } from "./hello-world";
+import { server as _fooBar } from "./foo-bar";
 
 // Start writing functions
 // https://firebase.google.com/docs/functions/typescript
@@ -19,5 +20,5 @@ import {expressServer} from "./express-server";
 //   response.send("Hello from Firebase asdasd!");
 // });
 
-
-export const helloWorld = onRequest(expressServer);
+export const helloWorld = onRequest(_helloWorld);
+export const fooBar = onRequest(_fooBar);

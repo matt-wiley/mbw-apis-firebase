@@ -1,7 +1,6 @@
 {
   "name": "functions",
   "scripts": {
-    "serve:exp": "nodemon src/express-server.ts",
     "lint": "eslint --ext .js,.ts .",
     "build": "tsc",
     "build:watch": "tsc --watch",

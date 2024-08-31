@@ -1,13 +1,13 @@
 import * as express from "express";
 import * as logger from "firebase-functions/logger";
 
-export const expressServer = (() => {
+export const server = (() => {
   const app = express();
   app.use(express.json());
 
   app.get("/", (req, res) => {
-    logger.info("Hello world received a request at '/'");
-    res.send(`Hello from firebase! -- ${Date.now().toString()}`);
+    logger.info("Foo bar received a request at '/'");
+    res.send(`Foo bar, baby! -- ${Date.now().toString()}`);
   });
 
   const runningLocally: boolean = process.env["FIREBASE_CONFIG"] === undefined;
