@@ -32,5 +32,7 @@ module.exports = {
     "indent": ["error", 2],
     "max-len": ["error", {"code": 120}],
     "object-curly-spacing": ["error", "always"],
+    "no-explicit-any": 0,
+    "no-inferrable-types": 0
   },
 };
